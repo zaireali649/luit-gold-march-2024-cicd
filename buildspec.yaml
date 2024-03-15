@@ -1,0 +1,6 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - aws s3 cp index.html s3://luit-gold-march-2024-beta --acl public-read

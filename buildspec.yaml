@@ -5,6 +5,6 @@ phases:
     commands:
       - aws s3 cp index.html s3://luit-gold-march-2024-beta --acl public-read
       - |
-        if [ "$CODEBUILD_SOURCE_VERSION_TYPE" == "pull_request_merged" ]; then
+        if [ "$CODEBUILD_WEBHOOK_EVENT" == "pull_request_merged" ]; then
             aws s3 cp index.html s3://luit-gold-march-2024-gold --acl public-read
         fi

@@ -1,1 +1,3 @@
 aws s3 cp index.html s3://luit-gold-march-2024-beta --acl public-read
+
+aws s3 cp index.html s3://luit-gold-march-2024-gold --acl public-read
